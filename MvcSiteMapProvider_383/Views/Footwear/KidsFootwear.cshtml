@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "KidsFootwear";
+}
+
+<h2>KidsFootwear</h2>
+
+@using (Html.BeginForm("SearchList", "Footwear", FormMethod.Get)) {
+
+    @Html.TextBox("query")
+    <input type="submit" value="Search" />
+}
