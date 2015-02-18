@@ -7,7 +7,7 @@ using MvcSiteMapProvider.Globalization;
 using MvcSiteMapProvider.Web.Mvc;
 using MvcSiteMapProvider.Web;
 
-namespace MvcSiteMapProvider_383.MvcSiteMapProvider
+namespace MvcSiteMapProvider_383
 {
     public class CopySessionSiteMapNodeFactory : ISiteMapNodeFactory
     {

@@ -52,6 +52,7 @@ namespace MvcSiteMapProvider_383.DI.Ninject.Modules
 // Example:
 // typeof(SiteMap),
 // typeof(SiteMapNodeVisibilityProviderStrategy)
+                typeof(ISiteMapNodeFactory)
             };
             var multipleImplementationTypes = new Type[] {
                 typeof(ISiteMapNodeUrlResolver),
@@ -75,6 +76,11 @@ namespace MvcSiteMapProvider_383.DI.Ninject.Modules
                 allAssemblies,
                 excludeTypes,
                 string.Empty);
+
+
+            // Plug in custom SiteMapNodeFactory
+            this.Kernel.Bind<ISiteMapNodeFactory>().To<CopySessionSiteMapNodeFactory>();
+
 
             this.Kernel.Bind<ISiteMapNodeVisibilityProviderStrategy>().To<SiteMapNodeVisibilityProviderStrategy>()
                 .WithConstructorArgument("defaultProviderName", string.Empty);
@@ -120,7 +126,7 @@ namespace MvcSiteMapProvider_383.DI.Ninject.Modules
             this.Kernel.Bind<IXmlSource>().To<FileXmlSource>().Named("XmlSource1")
                 .WithConstructorArgument("fileName", absoluteFileName);
             this.Kernel.Bind<IReservedAttributeNameProvider>().To<ReservedAttributeNameProvider>()
-                .WithConstructorArgument("attributesToIgnore", new string[0]);
+                .WithConstructorArgument("attributesToIgnore", new string[] { "copySessionToRoute" });
 
 // Register the sitemap node providers
             this.Kernel.Bind<ISiteMapNodeProvider>().To<XmlSiteMapNodeProvider>().Named("xmlSiteMapNodeProvider1")
@@ -158,6 +164,9 @@ namespace MvcSiteMapProvider_383.DI.Ninject.Modules
                     new ISiteMapBuilderSet[] {
                         this.Kernel.Get<ISiteMapBuilderSet>("siteMapBuilderSet1")
                     });
+
+
+            
         }
     }
 }
