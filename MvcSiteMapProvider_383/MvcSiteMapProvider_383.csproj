@@ -140,6 +140,7 @@
     </Compile>
     <Compile Include="MvcSiteMapProvider\CopySessionSiteMapNode.cs" />
     <Compile Include="MvcSiteMapProvider\CopySessionSiteMapNodeFactory.cs" />
+    <Compile Include="MvcSiteMapProvider\IgnoreSessionUrlResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

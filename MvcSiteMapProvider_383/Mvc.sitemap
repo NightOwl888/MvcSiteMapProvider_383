@@ -11,25 +11,25 @@
       <mvcSiteMapNode title="Products" controller="Product" action="Index">
 
         <mvcSiteMapNode title="Mens" controller="Product" action="ProductDetails" productType="Mens" copySessionToRoute="productType" visibility="Home,Mens,MensClothing,SiteMapPathHelper,!*">
-          <mvcSiteMapNode title="Choose your product type" controller="Product" action="ChooseType" productType="Mens" copySessionToRoute="productType" visibility="Home,Mens,MensClothing,SiteMapPathHelper,!*">
+          <mvcSiteMapNode title="Choose your product type" controller="Product" action="ChooseType" productType="Mens" copySessionToRoute="productType" cacheResolvedUrl="false" urlResolver="MvcSiteMapProvider_383.IgnoreSessionUrlResolver, MvcSiteMapProvider_383" visibility="Home,Mens,MensClothing,SiteMapPathHelper,!*">
             <mvcSiteMapNode title="Clothing" controller="Clothing" action="MensClothing" visibility="Home,MensClothing,SiteMapPathHelper,!*">
-              <mvcSiteMapNode title="Search results" controller="Clothing" action="SearchList" productType="Mens" copySessionToRoute="productType" visibility="Home,MensClothing, SiteMapPathHelper,!*"/>
+              <mvcSiteMapNode title="Search results" controller="Clothing" action="SearchList" productType="Mens" copySessionToRoute="productType" cacheResolvedUrl="false" urlResolver="MvcSiteMapProvider_383.IgnoreSessionUrlResolver, MvcSiteMapProvider_383" visibility="Home,MensClothing, SiteMapPathHelper,!*"/>
             </mvcSiteMapNode>
           </mvcSiteMapNode>
         </mvcSiteMapNode>
 
         <mvcSiteMapNode title="Womens" controller="Product" action="ProductDetails" id="Womens" visibility="Home,Womens,WomensClothing,SiteMapPathHelper,!*">
-          <mvcSiteMapNode title="Choose your product type" controller="Product" action="ChooseType" productType="Womens" copySessionToRoute="productType" visibility="Home,WomensClothing,SiteMapPathHelper,!*">
+          <mvcSiteMapNode title="Choose your product type" controller="Product" action="ChooseType" productType="Womens" copySessionToRoute="productType" cacheResolvedUrl="false" urlResolver="MvcSiteMapProvider_383.IgnoreSessionUrlResolver, MvcSiteMapProvider_383" visibility="Home,WomensClothing,SiteMapPathHelper,!*">
             <mvcSiteMapNode title="Clothing" controller="Clothing" action="WomensClothing" visibility="Home,WomensClothing,SiteMapPathHelper,!*">
-              <mvcSiteMapNode title="Search results" controller="Clothing" action="SearchList" productType="Womens" copySessionToRoute="productType" visibility="Home,WomensClothing, SiteMapPathHelper,!*"/>
+              <mvcSiteMapNode title="Search results" controller="Clothing" action="SearchList" productType="Womens" copySessionToRoute="productType" cacheResolvedUrl="false" urlResolver="MvcSiteMapProvider_383.IgnoreSessionUrlResolver, MvcSiteMapProvider_383" visibility="Home,WomensClothing, SiteMapPathHelper,!*"/>
             </mvcSiteMapNode>
           </mvcSiteMapNode>
         </mvcSiteMapNode>
 
         <mvcSiteMapNode title="Kids" controller="Product" action="ProductDetails" id="Kids" visibility="Home,Kids,KidsClothing,SiteMapPathHelper,!*">
-          <mvcSiteMapNode title="Choose your product type" controller="Product" action="ChooseType" productType="Kids" copySessionToRoute="productType" visibility="Home,Kids,KidsClothing,SiteMapPathHelper,!*">
+          <mvcSiteMapNode title="Choose your product type" controller="Product" action="ChooseType" productType="Kids" copySessionToRoute="productType" cacheResolvedUrl="false" urlResolver="MvcSiteMapProvider_383.IgnoreSessionUrlResolver, MvcSiteMapProvider_383" visibility="Home,Kids,KidsClothing,SiteMapPathHelper,!*">
             <mvcSiteMapNode title="Clothing" controller="Clothing" action="KidsClothing" visibility="Home,Kids,KidsClothing,SiteMapPathHelper,!*">
-              <mvcSiteMapNode title="Search results" controller="Clothing" action="SearchList" productType="Kids" copySessionToRoute="productType" visibility="Home,Kids,KidsClothing,SiteMapPathHelper,!*">
+              <mvcSiteMapNode title="Search results" controller="Clothing" action="SearchList" productType="Kids" copySessionToRoute="productType" cacheResolvedUrl="false" urlResolver="MvcSiteMapProvider_383.IgnoreSessionUrlResolver, MvcSiteMapProvider_383" visibility="Home,Kids,KidsClothing,SiteMapPathHelper,!*">
               </mvcSiteMapNode>
             </mvcSiteMapNode>
           </mvcSiteMapNode>
