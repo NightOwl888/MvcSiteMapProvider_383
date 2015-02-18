@@ -4,7 +4,39 @@
             xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
 
   <mvcSiteMapNode title="Home" controller="Home" action="Index">
-    <mvcSiteMapNode title="About" controller="Home" action="About"/>
+    <!--<mvcSiteMapNode title="HeadingPage" url="http://www.mysitename.com/sportsstore/" visibility="Home,SiteMapPathHelper,!*">
+      <mvcSiteMapNode title="Products" url="http://www.mysitename/sportsstore/products/" visibility="Home,Mens,MensClothing,WomensClothing,SiteMapPathHelper,!*">-->
+
+    <mvcSiteMapNode title="HeadingPage" controller="Home" action="HeadingPage">
+      <mvcSiteMapNode title="Products" controller="Product" action="Index">
+
+        <mvcSiteMapNode title="Mens" controller="Product" action="ProductDetails" productType="Mens" copySessionToRoute="productType" visibility="Home,Mens,MensClothing,SiteMapPathHelper,!*">
+          <mvcSiteMapNode title="Choose your product type" controller="Product" action="ChooseType" productType="Mens" copySessionToRoute="productType" visibility="Home,Mens,MensClothing,SiteMapPathHelper,!*">
+            <mvcSiteMapNode title="Clothing" controller="Clothing" action="MensClothing" visibility="Home,MensClothing,SiteMapPathHelper,!*">
+              <mvcSiteMapNode title="Search results" controller="Clothing" action="SearchList" productType="Mens" copySessionToRoute="productType" visibility="Home,MensClothing, SiteMapPathHelper,!*"/>
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+
+        <mvcSiteMapNode title="Womens" controller="Product" action="ProductDetails" id="Womens" visibility="Home,Womens,WomensClothing,SiteMapPathHelper,!*">
+          <mvcSiteMapNode title="Choose your product type" controller="Product" action="ChooseType" productType="Womens" copySessionToRoute="productType" visibility="Home,WomensClothing,SiteMapPathHelper,!*">
+            <mvcSiteMapNode title="Clothing" controller="Clothing" action="WomensClothing" visibility="Home,WomensClothing,SiteMapPathHelper,!*">
+              <mvcSiteMapNode title="Search results" controller="Clothing" action="SearchList" productType="Womens" copySessionToRoute="productType" visibility="Home,WomensClothing, SiteMapPathHelper,!*"/>
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>
+        </mvcSiteMapNode>
+
+        <mvcSiteMapNode title="Kids" controller="Product" action="ProductDetails" id="Kids" visibility="Home,Kids,KidsClothing,SiteMapPathHelper,!*">
+          <mvcSiteMapNode title="Choose your product type" controller="Product" action="ChooseType" productType="Kids" copySessionToRoute="productType" visibility="Home,Kids,KidsClothing,SiteMapPathHelper,!*">
+            <mvcSiteMapNode title="Clothing" controller="Clothing" action="KidsClothing" visibility="Home,Kids,KidsClothing,SiteMapPathHelper,!*">
+              <mvcSiteMapNode title="Search results" controller="Clothing" action="SearchList" productType="Kids" copySessionToRoute="productType" visibility="Home,Kids,KidsClothing,SiteMapPathHelper,!*">
+              </mvcSiteMapNode>
+            </mvcSiteMapNode>
+          </mvcSiteMapNode>
+
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
   </mvcSiteMapNode>
 
 </mvcSiteMap>

@@ -14,9 +14,9 @@ namespace MvcSiteMapProvider_383.Controllers
             return View();
         }
 
-        public ActionResult ProductDetails(string id)
+        public ActionResult ProductDetails(string productType)
         {
-            Session["productType"] = id;
+            Session["productType"] = productType;
 
             return View();
         }

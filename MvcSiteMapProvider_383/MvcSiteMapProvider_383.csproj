@@ -40,7 +40,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MvcSiteMapProvider">
+    <Reference Include="MvcSiteMapProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=1923abe4657913cc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\MvcSiteMapProvider.MVC4.Core.4.6.18\lib\net45\MvcSiteMapProvider.dll</HintPath>
     </Reference>
     <Reference Include="MvcSiteMapProvider.WebActivator">
@@ -124,6 +125,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MvcSiteMapProvider\CopySessionSiteMapNode.cs" />
+    <Compile Include="MvcSiteMapProvider\CopySessionSiteMapNodeFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

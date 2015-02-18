@@ -12,5 +12,15 @@
             @RenderBody()
         </section>
     </div>
+    <div id="footer">
+        <div id="left-menu">
+            <h3>Left Menu</h3>
+            @Html.MvcSiteMap().Menu(new { name = "LeftMenu" })
+        </div>
+        <div id="breadcrumb">
+            <h3>Breadcrumb</h3>
+            @Html.MvcSiteMap().SiteMapPath()
+        </div>
+    </div>
 </body>
 </html>
