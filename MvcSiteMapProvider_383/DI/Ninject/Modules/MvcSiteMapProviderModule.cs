@@ -24,7 +24,7 @@ namespace MvcSiteMapProvider_383.DI.Ninject.Modules
             bool enableLocalization = true;
             string absoluteFileName = HostingEnvironment.MapPath("~/Mvc.sitemap");
             TimeSpan absoluteCacheExpiration = TimeSpan.FromMinutes(5);
-            bool visibilityAffectsDescendants = true;
+            bool visibilityAffectsDescendants = false;
             bool useTitleIfDescriptionNotProvided = true;
 
 
@@ -83,7 +83,7 @@ namespace MvcSiteMapProvider_383.DI.Ninject.Modules
 
 
             this.Kernel.Bind<ISiteMapNodeVisibilityProviderStrategy>().To<SiteMapNodeVisibilityProviderStrategy>()
-                .WithConstructorArgument("defaultProviderName", string.Empty);
+                .WithConstructorArgument("defaultProviderName", "MvcSiteMapProvider.FilteredSiteMapNodeVisibilityProvider, MvcSiteMapProvider");
 
             this.Kernel.Bind<ControllerBuilder>().ToConstant(ControllerBuilder.Current);
 

@@ -209,6 +209,7 @@
     <Content Include="Views\Footwear\WomensFootwear.cshtml" />
     <Content Include="Views\Footwear\KidsFootwear.cshtml" />
     <Content Include="Views\Footwear\SearchList.cshtml" />
+    <Content Include="Views\Shared\_ProductLayout.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
