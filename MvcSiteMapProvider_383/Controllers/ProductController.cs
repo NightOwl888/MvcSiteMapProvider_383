@@ -8,17 +8,18 @@ namespace MvcSiteMapProvider_383.Controllers
 {
     public class ProductController : Controller
     {
-
-        public ActionResult Index()
-        {
-            return View();
-        }
-
         public ActionResult ProductDetails(string productType)
         {
-            Session["productType"] = productType;
+            if (string.IsNullOrEmpty(productType))
+            {
+                return View("Index");
+            }
+            else
+            {
+                Session["productType"] = productType;
 
-            return View();
+                return View();
+            }
         }
 
         public ActionResult ChooseType()
@@ -28,14 +29,5 @@ namespace MvcSiteMapProvider_383.Controllers
 
             return View();
         }
-
-        //[HttpPost]
-        //public ActionResult ChooseType(string type)
-        //{
-        //    var productType = Convert.ToString(Session["productType"]);
-
-        //    return new RedirectResult(Url.Action(type + productType));
-        //}
-
     }
 }

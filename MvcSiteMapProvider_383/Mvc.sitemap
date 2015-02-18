@@ -8,12 +8,15 @@
       <mvcSiteMapNode title="Products" url="http://www.mysitename/sportsstore/products/">-->
 
     <mvcSiteMapNode title="HeadingPage" controller="Home" action="HeadingPage" visibility="!ProductLeftMenu">
-      <mvcSiteMapNode title="Products" controller="Product" action="Index">
+      <mvcSiteMapNode title="Products" controller="Product" action="ProductDetails">
 
         <mvcSiteMapNode title="Mens" controller="Product" action="ProductDetails" productType="Mens" copySessionToRoute="productType" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*">
           <mvcSiteMapNode title="Choose your product type" controller="Product" action="ChooseType" productType="Mens" copySessionToRoute="productType" cacheResolvedUrl="false" urlResolver="MvcSiteMapProvider_383.IgnoreSessionUrlResolver, MvcSiteMapProvider_383" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*">
             <mvcSiteMapNode title="Clothing" controller="Clothing" action="MensClothing" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*">
               <mvcSiteMapNode title="Search results" controller="Clothing" action="SearchList" productType="Mens" copySessionToRoute="productType" cacheResolvedUrl="false" urlResolver="MvcSiteMapProvider_383.IgnoreSessionUrlResolver, MvcSiteMapProvider_383" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*"/>
+            </mvcSiteMapNode>
+            <mvcSiteMapNode title="Footwear" controller="Footwear" action="MensFootwear" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*">
+              <mvcSiteMapNode title="Search results" controller="Footwear" action="SearchList" productType="Mens" copySessionToRoute="productType" cacheResolvedUrl="false" urlResolver="MvcSiteMapProvider_383.IgnoreSessionUrlResolver, MvcSiteMapProvider_383" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*"/>
             </mvcSiteMapNode>
           </mvcSiteMapNode>
         </mvcSiteMapNode>
@@ -23,18 +26,23 @@
             <mvcSiteMapNode title="Clothing" controller="Clothing" action="WomensClothing" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*">
               <mvcSiteMapNode title="Search results" controller="Clothing" action="SearchList" productType="Womens" copySessionToRoute="productType" cacheResolvedUrl="false" urlResolver="MvcSiteMapProvider_383.IgnoreSessionUrlResolver, MvcSiteMapProvider_383" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*"/>
             </mvcSiteMapNode>
+            <mvcSiteMapNode title="Footwear" controller="Footwear" action="WomensFootwear" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*">
+              <mvcSiteMapNode title="Search results" controller="Footwear" action="SearchList" productType="Womens" copySessionToRoute="productType" cacheResolvedUrl="false" urlResolver="MvcSiteMapProvider_383.IgnoreSessionUrlResolver, MvcSiteMapProvider_383" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*"/>
+            </mvcSiteMapNode>
           </mvcSiteMapNode>
         </mvcSiteMapNode>
 
         <mvcSiteMapNode title="Kids" controller="Product" action="ProductDetails" productType="Kids" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*">
           <mvcSiteMapNode title="Choose your product type" controller="Product" action="ChooseType" productType="Kids" copySessionToRoute="productType" cacheResolvedUrl="false" urlResolver="MvcSiteMapProvider_383.IgnoreSessionUrlResolver, MvcSiteMapProvider_383" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*">
             <mvcSiteMapNode title="Clothing" controller="Clothing" action="KidsClothing" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*">
-              <mvcSiteMapNode title="Search results" controller="Clothing" action="SearchList" productType="Kids" copySessionToRoute="productType" cacheResolvedUrl="false" urlResolver="MvcSiteMapProvider_383.IgnoreSessionUrlResolver, MvcSiteMapProvider_383" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*">
-              </mvcSiteMapNode>
+              <mvcSiteMapNode title="Search results" controller="Clothing" action="SearchList" productType="Kids" copySessionToRoute="productType" cacheResolvedUrl="false" urlResolver="MvcSiteMapProvider_383.IgnoreSessionUrlResolver, MvcSiteMapProvider_383" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*"/>
+            </mvcSiteMapNode>
+            <mvcSiteMapNode title="Footwear" controller="Footwear" action="KidsFootwear" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*">
+              <mvcSiteMapNode title="Search results" controller="Footwear" action="SearchList" productType="Kids" copySessionToRoute="productType" cacheResolvedUrl="false" urlResolver="MvcSiteMapProvider_383.IgnoreSessionUrlResolver, MvcSiteMapProvider_383" visibility="ProductLeftMenuIfSelected,SiteMapPathHelper,!*"/>
             </mvcSiteMapNode>
           </mvcSiteMapNode>
-
         </mvcSiteMapNode>
+        
       </mvcSiteMapNode>
     </mvcSiteMapNode>
   </mvcSiteMapNode>
